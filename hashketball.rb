@@ -197,6 +197,7 @@ end
 
 
 def big_shoe_rebounds
+  
   shoe = 0
   rebounds = 0
   game_hash.each do |team, players|
@@ -205,6 +206,7 @@ def big_shoe_rebounds
           rebounds = data[:rebounds]
           shoe = data[:shoe_size]
         end
+        binding.pry
     end
   end
   return rebounds
