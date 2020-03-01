@@ -203,8 +203,8 @@ def big_shoe_rebounds
     place[:players].each do |player, data|
       binding.pry
         if player[:shoe] > shoe_size
-          rebounds = data[:rebounds]
-          shoe_size = data[:shoe]
+          rebounds = player[:rebounds]
+          shoe_size = player[:shoe]
         end
     end
   end
