@@ -198,12 +198,10 @@ end
 
 def big_shoe_rebounds
   max_player = nil
-  game_hash.each do |team, team_hash|
-    team_hash[:players].each do |player, player_hash|
-      if player_hash[:shoe_size] > max_player[:shoe_size]
+  game_hash.each do |players, data|
+      if data[:shoe_size] > max_player[:shoe_size]
         max_player = player_hash
       end
-    end
   end
   return max_player[:rebounds]
 end
