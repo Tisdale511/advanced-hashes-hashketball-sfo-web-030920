@@ -197,13 +197,17 @@ end
 
 
 def big_shoe_rebounds
-  max_player = {:rebounds => 0}
+  max_player = {
+    :shoe_size => 0,
+    :rebounds => 0,
+  }
   game_hash.each do |players, data|
       if data[:shoe_size] > max_player[:shoe_size]
         max_player[:rebounds] = data[:rebounds]
+        max_player[:shoe_size] = data[:shoe_size]
       end
   end
-  return max_player
+  return max_player[:rebounds]
 end
 
 
