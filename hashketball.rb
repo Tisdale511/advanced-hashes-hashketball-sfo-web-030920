@@ -206,7 +206,6 @@ def big_shoe_rebounds
           rebounds = data[:rebounds]
           shoe_size = data[:shoe]
         end
-        binding.pry
     end
   end
   return rebounds
