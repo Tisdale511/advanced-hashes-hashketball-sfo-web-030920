@@ -197,7 +197,6 @@ end
 
 
 def big_shoe_rebounds
-  binding.pry
   max_player = nil
   game_hash.each do |team, team_hash|
     team_hash[:players].each do |player, player_hash|
